@@ -1,0 +1,11 @@
+[package]
+name = "lmf"
+version = "0.0.1"
+license = "Apache-2.0"
+
+[addresses]
+lmf =  "0x0"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui", subdir = "crates/sui-framework/packages/sui-framework", rev = "main" }
+
