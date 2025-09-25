@@ -37,3 +37,42 @@ repo/
 │   └── README.md           # Documentation technique
 ├── script_demo.md          # Script CLI pour test du PoC
 └── README.md               # Présentation GitHub (ce fichier)
+
+---
+
+## 🔧 Stack technique
+
+| Composant     | Techno                           |
+|---------------|----------------------------------|
+| Smart Contract| Move (blockchain Sui)            |
+| Backend       | Node.js + Fastify                |
+| Frontend      | Next.js + TypeScript             |
+| Blockchain    | Sui (zkLogin, Dynamic Fields)    |
+| Librairies    | @mysten/sui.js, ECDSA, pnpm      |
+
+---
+
+## 💡 Fonctionnalités principales du PoC
+
+### 👤 Utilisateur
+- Connexion via JWT zkLogin
+- Mint d’un **Passeport Soulbound**
+- Scan de QR codes pour recevoir des attestations
+- Visualisation des missions actives
+- Réception automatique de micro‑grants après vérification des contributions
+
+### 🛠 Interface Admin
+- Création de missions (ID, métadonnées, fenêtre temporelle, poids)
+- Génération de QR codes signés (ECDSA P-256)
+- Déclenchement de la distribution automatisée via le backend
+
+---
+
+## ⚙️ Installation & test local
+
+### 1. Compiler et publier le smart contract Move
+
+```bash
+sui move build
+sui move test
+sui client publish --gas-budget 100000000
