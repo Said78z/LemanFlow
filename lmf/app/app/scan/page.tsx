@@ -18,11 +18,13 @@ export default function ScanPage() {
 
   return (
     <main>
-      <h2>Scanner QR</h2>
-      <p>Collez la signature QR ci-dessous (mock pour MVP).</p>
-      <textarea value={qr} onChange={e => setQr(e.target.value)} style={{ width: '100%', height: 120 }} />
-      <button onClick={submit} style={{ marginTop: 12, padding: 12, borderRadius: 8, background: '#6c63ff' }}>Envoyer</button>
-      {status && <pre style={{ whiteSpace: 'pre-wrap' }}>{status}</pre>}
+      <div className="card p-6 space-y-3">
+        <h2 className="text-xl font-semibold">Scanner QR</h2>
+        <p className="opacity-80">Collez la signature QR ci-dessous (mock pour MVP).</p>
+        <textarea value={qr} onChange={e => setQr(e.target.value)} className="w-full h-40 bg-black/30 rounded p-2" />
+        <button onClick={submit} className="button-primary">Envoyer</button>
+        {status && <pre className="whitespace-pre-wrap text-xs opacity-80">{status}</pre>}
+      </div>
     </main>
   );
 }

@@ -5,14 +5,13 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
   return (
     <main>
-      <h2>Connexion</h2>
-      <p>zkLogin (Google/Apple) — flux mocké pour MVP. Bouton ci-dessous.</p>
-      <button
-        onClick={() => setLoading(!loading)}
-        style={{ padding: 12, borderRadius: 8, background: "#6c63ff" }}
-      >
-        {loading ? "Connexion..." : "Se connecter avec Google (demo)"}
-      </button>
+      <div className="card p-8 space-y-4">
+        <h2 className="text-xl font-semibold">Connexion</h2>
+        <p className="opacity-80">zkLogin (Google/Apple) — flux mocké pour MVP. Bouton ci-dessous.</p>
+        <button onClick={() => setLoading(!loading)} className="button-primary">
+          {loading ? "Connexion..." : "Se connecter avec Google (demo)"}
+        </button>
+      </div>
     </main>
   );
 }

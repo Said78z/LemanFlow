@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+body {
+  @apply bg-suiDark text-white;
+}
+
+.card {
+  @apply bg-suiMid/60 backdrop-blur rounded-xl border border-white/10 shadow-xl;
+}
+
+.button-primary {
+  @apply px-4 py-2 rounded-lg bg-gradient-to-br from-suiBlue to-suiViolet text-white hover:opacity-90;
+}
+

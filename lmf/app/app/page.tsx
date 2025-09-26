@@ -1,8 +1,10 @@
 export default function Home() {
   return (
     <main>
-      <h1 style={{ fontSize: 28, marginBottom: 8 }}>Bienvenue sur LémanFlow</h1>
-      <p style={{ opacity: 0.8 }}>Micro-grants automatiques pour hackathons — Sui • zkLogin • gasless UX.</p>
+      <div className="card p-8">
+        <h1 className="text-3xl font-semibold mb-2">Bienvenue sur LémanFlow</h1>
+        <p className="opacity-80">Micro-grants automatiques pour hackathons — Sui • zkLogin • gasless UX.</p>
+      </div>
     </main>
   );
 }
